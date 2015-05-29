@@ -3965,7 +3965,7 @@ class WhatsProt
         ), array($picture, $preview), null);
 
         $this->sendNode($node);
-        $this->waitForServer($id, $timeout)($nodeID);
+        $this->waitForServer($nodeID);
     }
 
     /**
