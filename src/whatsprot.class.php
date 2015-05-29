@@ -1497,7 +1497,7 @@ class WhatsProt
     {
         $bodyNode = new ProtocolNode("body", null, null, $txt);
         $id = $this->sendMessageNode($to, $bodyNode, $id);
-        $this->waitForServer($id);
+        // $this->waitForServer($id);
 
         if ($this->messageStore !== null) {
             $this->messageStore->saveMessage($this->phoneNumber, $to, $txt, $id, time());
@@ -3836,7 +3836,7 @@ class WhatsProt
                 $node
             ));
 
-        $this->waitForServer($msgId);
+        // $this->waitForServer($msgId);
 
         return $msgId;
     }
@@ -3934,7 +3934,7 @@ class WhatsProt
         );
 
         $this->sendNode($node);
-        $this->waitForServer($id);
+        // $this->waitForServer($id);
 
         // Return message ID. Make pull request for this.
         return $messageId;
@@ -3964,7 +3964,7 @@ class WhatsProt
         ), array($picture, $preview), null);
 
         $this->sendNode($node);
-        $this->waitForServer($nodeID);
+        $this->waitForServer($id, $timeout)($nodeID);
     }
 
     /**
