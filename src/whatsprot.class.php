@@ -3935,7 +3935,7 @@ class WhatsProt
         );
 
         $this->sendNode($node);
-        // $this->waitForServer($id);
+        $this->waitForServer($id);
 
         // Return message ID. Make pull request for this.
         return $messageId;
